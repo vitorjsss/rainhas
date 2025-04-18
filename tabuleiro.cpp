@@ -10,7 +10,7 @@ using namespace std;
 pair<vector<vector<char>>, vector<pair<int, int>>> gerar_tabuleiro_com_bloqueios_melhorado(
     int n,
     int num_bloqueios = -1,
-    int seed = -1,
+    int seed = 0,
     double percentual_max = 0.2)
 {
     if (seed != -1)
@@ -61,7 +61,7 @@ void imprimir_tabuleiro(const vector<vector<char>> &tabuleiro, int limite = 32)
 int main()
 {
     int n = 8;
-    pair<vector<vector<char>>, vector<pair<int, int>>> resultado = gerar_tabuleiro_com_bloqueios_melhorado(n, -1, 10);
+    pair<vector<vector<char>>, vector<pair<int, int>>> resultado = gerar_tabuleiro_com_bloqueios_melhorado(n, -1, 1);
     vector<vector<char>> tabuleiro = resultado.first;
     vector<pair<int, int>> bloqueios = resultado.second;
 
